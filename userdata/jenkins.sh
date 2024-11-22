@@ -23,3 +23,14 @@ sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 
 sudo apt install ansible -y
+
+#installing aws cli
+sudo apt install unzip -y 
+
+sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+unzip awscliv2.zip
+
+sudo ./aws/install
+
+
