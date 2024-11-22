@@ -43,7 +43,7 @@ pipeline {
                     sh ''' ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                     -Dsonar.projectName=vprofile-repo \
                     -Dsonar.projectVersion=1.0 \
-                    -Dsonar.source=src \
+                    -Dsonar.source=src/ \
                     -Dsonar.java.binaries=target/classes/com/visualpathit/account/controller \
                     -Dsonar.junit.reportsPath=target/surefire-reports \
                     -Dsonar.jacoco.reportPaths=target/jacoco.exec \
