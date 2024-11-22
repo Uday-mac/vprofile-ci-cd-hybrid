@@ -92,8 +92,8 @@ pipeline {
     post {
         always {
             steps {
-                slackSend channel: "#jenkins-hybrid"
-                color: COLOR_MAP[currentBuild.currentResult]
+                slackSend channel: "#jenkins-hybrid",
+                color: COLOR_MAP[currentBuild.currentResult],
                 message: "Find Status of Pipeline:- ${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} \n more info at  ${BUILD_URL}"
             }
         }
