@@ -12,7 +12,7 @@ pipeline {
     environment {
         sonar_scanner = 'sonar4.7'
         sonar_server = 'sonar'
-        NEXUS_IP = '18.208.247.120'
+        NEXUS_IP = '3.80.46.115'
         NEXUS_PORT = '8081'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'

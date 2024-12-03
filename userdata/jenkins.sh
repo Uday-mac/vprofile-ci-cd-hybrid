@@ -4,6 +4,8 @@ sudo apt update
 #installing java 
 sudo apt install openjdk-17-jdk -y
 
+sudo apt install openjdk-8-jdk -y
+
 #installing jenkins
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
