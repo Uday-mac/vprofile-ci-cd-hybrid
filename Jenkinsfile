@@ -72,7 +72,7 @@ pipeline {
                 nexusArtifactUploader(
                 nexusVersion: 'nexus3',
                 protocol: 'http',
-                nexusUrl: "${NEXUS_URL}:${NEXUS_PORT}",
+                nexusUrl: "${NEXUS_IP}:${NEXUS_PORT}",
                 groupId: 'QA',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                 repository: "${RELEASE_REPO}",
@@ -92,7 +92,7 @@ pipeline {
     post {
         always {
             steps {
-                slackSend channel: "#jenkins-hybrid",
+                slackSend channel: "#vprofile-hybrid",
                 color: COLOR_MAP[currentBuild.currentResult],
                 message: "Find Status of Pipeline:- ${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} \n more info at  ${BUILD_URL}"
             }
